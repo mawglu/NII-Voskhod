@@ -1,0 +1,134 @@
+@import url('https://fonts.googleapis.com/css2?family=Abel&display=swap');
+@import 'var';
+@import 'mixin';
+@import 'media';
+
+h1, .h1 {
+  font-size: $fs-h1;
+}
+
+.fs {
+  &-bs {
+    font-size: $fs-base;
+  }
+
+  &-sm {
+    font-size: $fs-small;
+  }
+}
+
+.fw {
+  &-400 {
+    font-weight: 400;
+  }
+
+  &-500 {
+    font-weight: 500;
+  }
+
+  &-600 {
+    font-weight: 600;
+  }
+}
+
+.t-align {
+  &-l {
+    text-align: left;
+  }
+
+  &-r {
+    text-align: right;
+  }
+
+  &-c {
+    text-align: center;
+  }
+
+  &-j {
+    text-align: justify;
+  }
+}
+
+.bg {
+  &-white {
+    background-color: $white;
+  }
+
+  &-black {
+    background-color: $black;
+  }
+
+  &-dark {
+    background-color: $dark;
+  }
+
+  &-gray {
+    background-color: $gray;
+  }
+
+  &-blue {
+    background-color: $blue;
+  }
+}
+
+.color {
+  &-white {
+    color: $white;
+  }
+
+  &-gray {
+    color: $gray;
+  }
+
+  &-black {
+    color: $black;
+  }
+
+  &-dark {
+    color: $dark;
+  }
+
+  &-blue {
+    color: $blue;
+  }
+
+  &-red {
+    color: $red;
+  }
+
+  &-inherit {
+    color: inherit;
+  }
+}
+
+.btn {
+  &-cus {
+    max-width: 100%;
+    @include prefix((
+            cursor: pointer,
+            border: none,
+            outline: none,
+            box-shadow: none,
+            border-radius: 0,
+            display: block,
+    ), webkit moz);
+
+    &:focus,
+    &:active {
+      @include prefix((
+              border: none,
+              outline: none,
+              box-shadow: none,
+      ), webkit moz);
+    }
+
+    &-primary {
+      background: $blue;
+      color: $white;
+      @include prefix((
+              padding: 12px 115px,
+              border-radius: 12px,
+      ), webkit moz);
+    }
+  }
+}

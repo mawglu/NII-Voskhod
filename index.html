@@ -1,0 +1,89 @@
+<!doctype html>
+<html lang="ru">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!--  CSS for this page -->
+    <link href="css/style.css" rel="stylesheet">
+
+    <!--  TITLE for this page -->
+    <title>Заявка на регистрацию ПО</title>
+</head>
+<body class="bg-gray">
+<main class="container">
+    <div class="wrap">
+        <form class="form" action="/" method="POST" enctype="multipart/form-data">
+            <h1 class="form-title h1 fw-400 t-align-c">Заявка на регистрацию ПО</h1>
+            <div class="form-group">
+                <label class="form-group_label">
+                    <input class="form-group_input" type="text" name="form_data_name" id="form_data_name"
+                           placeholder="Имя">
+                </label>
+            </div>
+            <div class="form-group">
+                <label class="form-group_label">
+                    <input class="form-group_input" type="email" name="form_data_email" id="form_data_email"
+                           placeholder="Почта">
+                </label>
+            </div>
+            <div class="form-group">
+                <label class="form-group_label">
+                    <input class="form-group_input phone" type="tel" name="form_data_tel" id="form_data_tel"
+                           placeholder="Номер телефона">
+                </label>
+            </div>
+            <div class="form-group">
+                <label class="form-group_label">
+                    <input class="form-group_input" type="text" name="form_data_po_name" id="form_data_po_name"
+                           placeholder="Название ПО">
+                </label>
+            </div>
+            <div class="form-group dropdown">
+                <label class="form-group_label">
+                    <input class="form-group_input dropdown-toggle" type="text" name="form_data_po_type"
+                           id="form_data_po_type"
+                           placeholder="Тип ПО"
+                           readonly>
+                </label>
+                <ul class="dropdown-menu">
+                    <li>
+                        <button class="dropdown-item t-align-l" type="button" value="Тип первый">
+                            Тип первый
+                        </button>
+                    </li>
+                    <li>
+                        <button class="dropdown-item t-align-l" type="button"
+                                value="Тип второй">
+                            Тип второй
+                        </button>
+                    </li>
+                    <li>
+                        <button class="dropdown-item t-align-l" type="button"
+                                value="Тип третий">
+                            Тип третий
+                        </button>
+                    </li>
+                </ul>
+            </div>
+            <div class="form-group">
+                <label class="form-group_label">
+                <textarea class="form-group_input ckeditor" rows="5" cols="45" name="form_data_application_text"
+                          id="form_data_application_text" placeholder="Текст заявки"></textarea>
+                </label>
+            </div>
+            <div class="form-group">
+                <button class="btn-cus btn-cus-primary fs-bs" type="submit"><span>Отправить</span></button>
+            </div>
+        </form>
+    </div>
+</main>
+
+<!--  JS for this page -->
+<script src="https://code.jquery.com/jquery-3.6.0.slim.min.js"></script>
+<script src="js/jquery.mask.min.js"></script>
+<script src="js/jquery.validate.min.js"></script>
+<script src="js/select.js"></script>
+<script src="js/validate.js"></script>
+</body>
+</html>
