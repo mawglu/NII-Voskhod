@@ -21,12 +21,10 @@
     }
 
     /**
-     * validate forms
+     * validate & submit handler forms
      */
     form.each(function () {
-        const $self = $(this);
-
-        $self.validate({
+        $(this).validate({
             ignore: [],
             rules: {
                 form_data_name: {required: true},
@@ -56,22 +54,19 @@
             unhighlight: function (element) {
                 $(element).closest('.form-group').removeClass('has-error');
             },
-            submitHandler: function (form, ev) {
-                ev.preventDefault();
-
-                formReset();
-                alert('Submitted!');
-
-                // $.ajax({
-                //     type: $self.attr('method'),
-                //     url: $self.attr('action'),
-                //     data: $self.serialize(),
-                //     dataType: 'json',
-                // }).done(function () {
-                //     console.log('success');
-                // }).fail(function () {
-                //     console.log('fail');
-                // });
+            submitHandler: function (f, e) {
+                e.preventDefault();
+                $.ajax({
+                    type: f.method,
+                    url: f.action,
+                    data: $(f).serialize(),
+                    dataType: 'json',
+                }).done(function (data) {
+                    formReset();
+                    alert(data.message);
+                }).fail(function (data) {
+                    alert(data.message);
+                });
             }
         });
     });
