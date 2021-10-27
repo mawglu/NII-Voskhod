@@ -1,6 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Abel&display=swap');
-@import 'var';
-@import 'mixin';
+
+@import 'vars';
 @import 'media';
 
 h1, .h1 {
@@ -104,31 +104,25 @@ h1, .h1 {
 .btn {
   &-cus {
     max-width: 100%;
-    @include prefix((
-            cursor: pointer,
-            border: none,
-            outline: none,
-            box-shadow: none,
-            border-radius: 0,
-            display: block,
-    ), webkit moz);
+    cursor: pointer;
+    border: none;
+    outline: none;
+    box-shadow: none;
+    border-radius: 0;
+    display: block;
 
     &:focus,
     &:active {
-      @include prefix((
-              border: none,
-              outline: none,
-              box-shadow: none,
-      ), webkit moz);
+      border: none;
+      outline: none;
+      box-shadow: none;
     }
 
     &-primary {
       background: $blue;
       color: $white;
-      @include prefix((
-              padding: 12px 115px,
-              border-radius: 12px,
-      ), webkit moz);
+      padding: 12px 115px;
+      border-radius: 12px;
     }
   }
 }

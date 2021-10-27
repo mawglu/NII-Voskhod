@@ -15,11 +15,9 @@ body {
     font-style: normal;
   }
 
-  @include prefix((
-          overflow-x: hidden,
-          display: flex,
-          flex-direction: column,
-  ), webkit moz);
+  overflow-x: hidden;
+  display: flex;
+  flex-direction: column;
 
 }
 
@@ -51,10 +49,8 @@ body {
 .wrap {
   width: 100%;
   height: 100%;
-  @include prefix((
-          display: flex,
-          flex-direction: column,
-  ), webkit moz);
+  display: flex;
+  flex-direction: column;
 }
 
 .form {
@@ -82,21 +78,17 @@ body {
       width: 100%;
       box-sizing: border-box;
       font-size: $fs-small;
-      @include prefix((
-              border-radius: 12px,
-              border: 1px solid $gray-border,
-              background: $white,
-              padding: 14px 20px,
-              transition: all 0.2s,
-              outline: none,
-              box-shadow: none,
-      ), webkit moz);
+      border-radius: 12px;
+      border: 1px solid $gray-border;
+      background: $white;
+      padding: 14px 20px;
+      transition: all 0.2s;
+      outline: none;
+      box-shadow: none;
 
       &:focus {
-        @include prefix((
-                outline: none,
-                box-shadow: none,
-        ), webkit moz);
+        outline: none;
+        box-shadow: none;
       }
 
       &::placeholder {
@@ -186,22 +178,19 @@ body {
 
   &-menu {
     list-style: none;
-    padding: 0;
     margin: 0;
     width: 100%;
     position: absolute;
     box-sizing: border-box;
     z-index: -1;
     opacity: 0;
-    @include prefix((
-            border-radius: 12px,
-            border: 1px solid $gray-border,
-            background: $white,
-            padding: 8px 10px,
-            transition: all 0.2s,
-            outline: none,
-            box-shadow: none,
-    ), webkit moz);
+    border-radius: 12px;
+    border: 1px solid $gray-border;
+    background: $white;
+    padding: 8px 10px;
+    transition: all 0.2s;
+    outline: none;
+    box-shadow: none;
 
     .dropdown-item {
       width: 100%;
@@ -209,18 +198,14 @@ body {
       font-size: $fs-small;
       background-color: $white;
       box-sizing: border-box;
-      @include prefix((
-              border: none,
-              padding: 11px 10.5px,
-              white-space: inherit,
-              cursor: pointer,
-              opacity: .2,
-      ), webkit moz);
+      border: none;
+      padding: 11px 10.5px;
+      white-space: inherit;
+      cursor: pointer;
+      opacity: .2;
 
       &:hover {
-        @include prefix((
-                opacity: .7,
-        ), webkit moz);
+        opacity: .7;
       }
     }
   }

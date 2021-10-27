@@ -1,0 +1,36 @@
+{
+  "name": "nii-voskhod",
+  "version": "1.0.0",
+  "description": "index.html<br> <br> css:<br> ccs/style.scss - contains styles<br> ccs/_var.scss - contains variables<br> ccs/_ui.scss - contains elements<br> ccs/_mixin.scss - contains mixins<br> ccs/_media.scss - contains breakpoints<br> <br> js:<br> js/jquery.mask.js - jquery mask plugin<br> js/jquery.validate.js - jquery validate plugin<br> js/select.js - form select handler<br> js/validate.js - form validate/submit handler<br> <br> php:<br> php/mailer.php - php form handler ### sass watch ``` sass --watch style.scss:style.css ``` ### sass build ``` sass style.scss style.css ```",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mawglu/NII-Voskhod.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/mawglu/NII-Voskhod/issues"
+  },
+  "homepage": "https://github.com/mawglu/NII-Voskhod#readme",
+  "devDependencies": {
+    "@babel/core": "^7.15.8",
+    "@babel/preset-env": "^7.15.8",
+    "@babel/register": "^7.15.3",
+    "gulp": "^4.0.2",
+    "gulp-concat": "^2.6.1"
+  },
+  "dependencies": {
+    "del": "^6.0.0",
+    "gulp-babel": "^8.0.0",
+    "gulp-clean-css": "^4.3.0",
+    "gulp-rename": "^2.0.0",
+    "gulp-sass": "^5.0.0",
+    "gulp-sourcemaps": "^3.0.0",
+    "gulp-uglify": "^3.0.2",
+    "sass": "^1.43.3"
+  }
+}
