@@ -5,11 +5,6 @@
     const form = $('form');
 
     /**
-     * mask for input type=tel
-     */
-    $('input[type=tel]').mask('+7 (999) 999-99-99');
-
-    /**
      * @return {boolean}
      *
      * reset form field

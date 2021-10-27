@@ -38,9 +38,11 @@ function styles() {
 
 function scripts() {
     return gulp.src(paths.scripts.src, {sourcemaps: true})
+        .pipe(sourcemaps.init())
         .pipe(babel())
         .pipe(uglify())
         .pipe(concat('index.min.js'))
+        .pipe(sourcemaps.write())
         .pipe(gulp.dest(paths.scripts.dest))
 }
 
